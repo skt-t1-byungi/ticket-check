@@ -5,11 +5,11 @@ main()
 const TICKET_NAME = '히게단내한'
 
 async function main() {
-    const resp = await fetch('https://api-ticketfront.interpark.com/v1/goods/24011642/playSeq/PlaySeq/001/REMAINSEAT')
+    const resp = await fetch(
+        'https://thingproxy.freeboard.io/fetch/https://api-ticketfront.interpark.com/v1/goods/24011642/playSeq/PlaySeq/001/REMAINSEAT'
+    )
     if (!resp.ok) {
         console.log(`HTTP error! status: ${resp.status}`)
-        // DEBUG
-        console.log(await resp.text(), JSON.stringify(resp.headers, null, 4))
         return
     }
     const data = await resp.json()
