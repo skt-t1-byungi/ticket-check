@@ -1,9 +1,9 @@
 const { fetch } = require('undici')
 
-main()
-
 const TICKET_NAME = '히게단내한'
 const TICKET_ID = '24011642'
+
+main()
 
 async function main() {
     const resp = await fetch(
